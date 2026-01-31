@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 public class MapController : MonoBehaviour
 {
@@ -27,6 +26,7 @@ public class MapController : MonoBehaviour
         mg.CalculateGridSize();
         mi.Initialize();
         mt.SetGuestsTraits(guests);
+        mrMascara = guests[Random.Range(0, guests.Length)];
     }
 
     #region Wrappers

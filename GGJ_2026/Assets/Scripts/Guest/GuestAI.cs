@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 
 public class GuestAI : MonoBehaviour
@@ -68,7 +67,7 @@ public class GuestAI : MonoBehaviour
         if (lastAttemptedActivity != null)
             currentAvaibleActivities.Remove(lastAttemptedActivity);
 
-        int activityCount = currentAvaibleActivities.Count();
+        int activityCount = currentAvaibleActivities.Count;
 
         if (activityCount == 0)
         {
@@ -76,7 +75,7 @@ public class GuestAI : MonoBehaviour
             return;
         }
 
-        int index = Random.Range(0, currentAvaibleActivities.Count());
+        int index = Random.Range(0, currentAvaibleActivities.Count);
 
         movingToActivity = true;
         currentActivity = currentAvaibleActivities[index];
