@@ -34,16 +34,21 @@ public class MapController : MonoBehaviour
         initialTilePos = new Vector2Int((int)leftWall.position.x, (int)bottomWall.position.y);
     }
 
-    public Vector2Int GetRandomTile() 
+    public Vector2Int GetRandomTile()
     {
         Vector2Int randomTile = Vector2Int.zero;
 
-        randomTile.x = (int)Random.Range(0, gridSize.x);
-        randomTile.y = (int)Random.Range(0, gridSize.y);
-
-        randomTile = GetTilePos(randomTile.x, randomTile.y);
+        randomTile.x = Random.Range(0, gridSize.x);
+        randomTile.y = Random.Range(0, gridSize.y);
 
         return randomTile;
+    }
+
+    public Vector2Int GetRandomTilePos() 
+    {
+        Vector2Int randomTile = GetRandomTile();
+
+        return GetTilePos(randomTile.x, randomTile.y);
     }
 
     public Vector2Int GetTilePos(int x, int y) 
@@ -58,7 +63,7 @@ public class MapController : MonoBehaviour
         return tilePos;
     }
 
-    public Vector2Int GetTilePos(Vector2 position)
+    public Vector2Int PosToTile(Vector2 position)
     {
         Vector2Int tilePos = Vector2Int.zero;
 
