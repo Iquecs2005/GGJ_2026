@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float maxMoveSpeed;
     [SerializeField] private float accelerationRate;
     [SerializeField] private float desaccelerationRate;
+    [SerializeField] private float minInputForTurning;
 
     private float currentAcceleration;
     private float currentDesacceleration;
@@ -38,6 +40,34 @@ public class PlayerMovement : MonoBehaviour
         if (moveInput.sqrMagnitude > 1) 
         {
             moveInput.Normalize();
+        }
+
+        CalculateFacingDir();
+    }
+
+    private void CalculateFacingDir() 
+    {
+        if (Mathf.Abs(moveInput.x) >= Mathf.Abs(moveInput.y))
+        {
+            if (moveInput.x > minInputForTurning)
+            {
+                pc.SetFacingDirection(Vector2.right);
+            }
+            else if (moveInput.x < -minInputForTurning)
+            {
+                pc.SetFacingDirection(Vector2.left);
+            }
+        }
+        else
+        {
+            if (moveInput.y > minInputForTurning)
+            {
+                pc.SetFacingDirection(Vector2.up);
+            }
+            else if (moveInput.y < -minInputForTurning)
+            {
+                pc.SetFacingDirection(Vector2.down);
+            }
         }
     }
 

@@ -7,6 +7,7 @@ using UnityEngine.InputSystem;
 public class PlayerInputController : MonoBehaviour
 {
     [SerializeField] private UnityEvent<Vector2> OnMoveEvent;
+    [SerializeField] private UnityEvent OnInteractionEvent;
 
     public void OnMove(InputAction.CallbackContext context) 
     {
@@ -18,7 +19,7 @@ public class PlayerInputController : MonoBehaviour
     public void OnInteract(InputAction.CallbackContext context) 
     {
         if (context.performed)
-            print("Interact");
+            OnInteractionEvent.Invoke();
     }
 
     public void OnBlame(InputAction.CallbackContext context)
