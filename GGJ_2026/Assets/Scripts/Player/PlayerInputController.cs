@@ -14,4 +14,22 @@ public class PlayerInputController : MonoBehaviour
 
         OnMoveEvent.Invoke(moveInput);
     }
+
+    public void OnInteract(InputAction.CallbackContext context) 
+    {
+        if (context.performed)
+            print("Interact");
+    }
+
+    public void OnBlame(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            print("Blame");
+    }
+
+    public void OnNotebook(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+            print("Notebook");
+    }
 }
