@@ -1020,7 +1020,9 @@ MonoBehaviour:
   topWall: {fileID: 291172092}
   leftWall: {fileID: 1484731853}
   rightWall: {fileID: 1570200562}
-  interactionObjects: []
+  interactionObjects:
+  - {fileID: 151378877}
+  - {fileID: 453932292}
 --- !u!4 &1609930733
 Transform:
   m_ObjectHideFlags: 0
