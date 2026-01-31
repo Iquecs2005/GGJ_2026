@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7683255111188285493}
   - component: {fileID: 3721519171341134656}
   - component: {fileID: 5265864319422939192}
+  - component: {fileID: 1130632128803329676}
   m_Layer: 0
   m_Name: MaskedCharacter
   m_TagString: Untagged
@@ -49,22 +50,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gm: {fileID: 3721519171341134656}
   gai: {fileID: 5265864319422939192}
+  gtm: {fileID: 1130632128803329676}
   currentAction: 0
---- !u!114 &3721519171341134656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496943945884434553}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b7b2f4ec75ad27c4fa464aeca9509c3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gc: {fileID: 7683255111188285493}
-  guestSpeed: 2
-  tileProximityNeeded: 0.025
+  onActivityEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5265864319422939192}
+        m_TargetAssemblyTypeName: GuestAI, Assembly-CSharp
+        m_MethodName: OnActivityEnd
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onMovementEnd:
     m_PersistentCalls:
       m_Calls:
@@ -80,6 +82,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onNearMovementEnd:
+    m_PersistentCalls:
+      m_Calls: []
+  onTraitsModification:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5265864319422939192}
+        m_TargetAssemblyTypeName: GuestAI, Assembly-CSharp
+        m_MethodName: GenerateActivityList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3721519171341134656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496943945884434553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7b2f4ec75ad27c4fa464aeca9509c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 7683255111188285493}
+  guestSpeed: 2
+  tileProximityNeeded: 0.025
 --- !u!114 &5265864319422939192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -96,6 +131,21 @@ MonoBehaviour:
   ActivityChance: 30
   minTimeBetweenActions: 0
   maxTimeBetweenActions: 10
+  availableActivities: []
+--- !u!114 &1130632128803329676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 496943945884434553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02e49bfe0cc1e0947924b4a57070b18b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gc: {fileID: 7683255111188285493}
+  personalityTraits: []
 --- !u!1 &9160130629364277575
 GameObject:
   m_ObjectHideFlags: 0

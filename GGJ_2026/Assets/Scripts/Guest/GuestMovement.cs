@@ -12,9 +12,6 @@ public class GuestMovement : MonoBehaviour
     [SerializeField] private float guestSpeed;
     [SerializeField] private float tileProximityNeeded;
 
-    [Header("Events")]
-    [SerializeField] private UnityEvent onMovementEnd;
-
     private Vector2Int finalDestinationPos = Vector2Int.zero;
     private Vector2Int tileDestinationPos = Vector2Int.zero;
     private Vector2Int tileDestinationVector = Vector2Int.zero;
@@ -65,6 +62,11 @@ public class GuestMovement : MonoBehaviour
 
         currentRoundedPos = MapController.instance.RoundVector(transform.position);
         Vector2Int moveDestinationVector = finalDestinationPos - currentRoundedPos;
+
+        if (moveDestinationVector.magnitude <= 1) 
+        {
+            OnNearMovementEnd();
+        }
 
         if (xStrideBigger)
         {
@@ -141,6 +143,11 @@ public class GuestMovement : MonoBehaviour
 
     private void EndMovement() 
     {
-        onMovementEnd.Invoke();
+        gc.onMovementEnd.Invoke();
+    }
+
+    private void OnNearMovementEnd()
+    {
+        gc.onNearMovementEnd.Invoke();
     }
 }

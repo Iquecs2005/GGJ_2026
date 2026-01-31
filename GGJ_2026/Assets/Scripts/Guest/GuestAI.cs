@@ -15,12 +15,11 @@ public class GuestAI : MonoBehaviour
     [SerializeField] private float minTimeBetweenActions;
     [SerializeField] private float maxTimeBetweenActions;
 
-    private InteractionObject[] availableActivities;
+    [SerializeField] private List<InteractionObject> availableActivities;
 
-    private void Start()
-    {
-        availableActivities = MapController.instance.GetInteractionObjects();
-    }
+    private InteractionObject currentActivity;
+    private InteractionObject lastAttemptedActivity;
+    private bool movingToActivity;
 
     private void FixedUpdate()
     {
@@ -30,8 +29,21 @@ public class GuestAI : MonoBehaviour
         }
     }
 
+    public void GenerateActivityList()
+    {
+        availableActivities = MapController.instance.GetInteractionObjects();
+
+        gc.gtm.RemoveConflictingInteractions(ref availableActivities);
+    }
+
     public void OnMovementEnd() 
     {
+        if (movingToActivity)
+        {
+            PerformActivity();
+            return;
+        }
+        lastAttemptedActivity = null;
         StartCoroutine(WaitBetweenAmount(minTimeBetweenActions, maxTimeBetweenActions));
     }
 
@@ -41,7 +53,7 @@ public class GuestAI : MonoBehaviour
 
         if (chance < ActivityChance)
         {
-            PerformActivity();
+            MoveToActivity();
         }
         else 
         {
@@ -49,12 +61,65 @@ public class GuestAI : MonoBehaviour
         }
     }
 
+    private void MoveToActivity() 
+    {
+        List<InteractionObject> currentAvaibleActivities = new List<InteractionObject>(availableActivities);
+
+        if (lastAttemptedActivity != null)
+            currentAvaibleActivities.Remove(lastAttemptedActivity);
+
+        int activityCount = currentAvaibleActivities.Count();
+
+        if (activityCount == 0)
+        {
+            gc.gm.MoveToRandomTile();
+            return;
+        }
+
+        int index = Random.Range(0, currentAvaibleActivities.Count());
+
+        movingToActivity = true;
+        currentActivity = currentAvaibleActivities[index];
+
+        gc.gm.MoveToTile(currentActivity.interactionTile);
+
+        gc.onNearMovementEnd.AddListener(CheckActivityAvailability);
+    }
+
+    public void CheckActivityAvailability()
+    {
+        lastAttemptedActivity = currentActivity;
+
+        if (currentActivity.IsOccupied())
+        {
+            movingToActivity = false;
+            gc.ChangeCurrentState(GuestActions.Ready);
+        }
+        else 
+        {
+            currentActivity.SetOccupied(gc);
+        }
+
+        gc.onNearMovementEnd.RemoveListener(CheckActivityAvailability);
+    }
+
     private void PerformActivity() 
     {
-        int index = Random.Range(0, availableActivities.Count());
+        movingToActivity = false;
 
-        print("Alo " + availableActivities[index].interactionTile.ToString());
-        gc.gm.MoveToTile(availableActivities[index].interactionTile);
+        if (currentActivity.Activate(gc)) 
+        {
+            gc.ChangeCurrentState(GuestActions.Acting);
+        }
+        else 
+        {
+            gc.ChangeCurrentState(GuestActions.Ready);
+        }
+    }
+
+    public void OnActivityEnd() 
+    {
+        gc.ChangeCurrentState(GuestActions.Ready);
     }
 
     private IEnumerator WaitBetweenAmount(float minTime, float maxTime) 

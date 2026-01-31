@@ -2,47 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MapController : MonoBehaviour
+public class MapGrid : MonoBehaviour
 {
-    public static MapController instance { get; private set; } 
+    [Header("References")]
+    [SerializeField] private MapController mc;
 
+    [Header("Grid Variables")]
     [SerializeField] private Transform bottomWall;
     [SerializeField] private Transform topWall;
     [SerializeField] private Transform leftWall;
     [SerializeField] private Transform rightWall;
 
-    [SerializeField] private InteractionObject[] interactionObjects;
-
     public Vector2Int gridSize { get; private set; }
     private Vector2Int initialTilePos;
 
-    private void Awake()
-    {
-        if (instance != null) 
-        {
-            Destroy(instance);
-        }
-        instance = this;
-
-        CalculateGridSize();
-        InitializeInteractions();
-    }
-
-    private void CalculateGridSize() 
+    public void CalculateGridSize()
     {
         int xCount = (int)(rightWall.position.x - leftWall.position.x);
         int yCount = (int)(topWall.position.y - bottomWall.position.y);
 
         gridSize = new Vector2Int(xCount, yCount);
         initialTilePos = new Vector2Int((int)leftWall.position.x, (int)bottomWall.position.y);
-    }
-
-    private void InitializeInteractions() 
-    {
-        foreach (InteractionObject interaction in interactionObjects) 
-        {
-            interaction.Initialize();
-        }
     }
 
     public Vector2Int GetRandomTile()
@@ -55,14 +35,14 @@ public class MapController : MonoBehaviour
         return randomTile;
     }
 
-    public Vector2Int GetRandomTilePos() 
+    public Vector2Int GetRandomTilePos()
     {
         Vector2Int randomTile = GetRandomTile();
 
         return GetTilePos(randomTile.x, randomTile.y);
     }
 
-    public Vector2Int GetTilePos(int x, int y) 
+    public Vector2Int GetTilePos(int x, int y)
     {
         Vector2Int tilePos = Vector2Int.zero;
 
@@ -95,9 +75,4 @@ public class MapController : MonoBehaviour
 
         return tilePos;
     }
-
-    public InteractionObject[] GetInteractionObjects() 
-    {
-        return interactionObjects;
-    } 
 }
