@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class GuestAI : MonoBehaviour
@@ -7,9 +8,19 @@ public class GuestAI : MonoBehaviour
     [Header("References")]
     [SerializeField] private GuestController gc;
 
+    [Header("Activity variables")]
+    [SerializeField] private float ActivityChance;
+
     [Header("Wait variables")]
     [SerializeField] private float minTimeBetweenActions;
     [SerializeField] private float maxTimeBetweenActions;
+
+    private InteractionObject[] availableActivities;
+
+    private void Start()
+    {
+        availableActivities = MapController.instance.GetInteractionObjects();
+    }
 
     private void FixedUpdate()
     {
@@ -26,7 +37,24 @@ public class GuestAI : MonoBehaviour
 
     private void ChooseNextAction() 
     {
-        gc.gm.MoveToRandomTile();
+        float chance = Random.Range(0, 100);
+
+        if (chance < ActivityChance)
+        {
+            PerformActivity();
+        }
+        else 
+        {
+            gc.gm.MoveToRandomTile();
+        }
+    }
+
+    private void PerformActivity() 
+    {
+        int index = Random.Range(0, availableActivities.Count());
+
+        print("Alo " + availableActivities[index].interactionTile.ToString());
+        gc.gm.MoveToTile(availableActivities[index].interactionTile);
     }
 
     private IEnumerator WaitBetweenAmount(float minTime, float maxTime) 

@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gc: {fileID: 7683255111188285493}
+  ActivityChance: 30
   minTimeBetweenActions: 0
   maxTimeBetweenActions: 10
 --- !u!1 &9160130629364277575

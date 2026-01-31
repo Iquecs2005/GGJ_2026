@@ -11,6 +11,8 @@ public class MapController : MonoBehaviour
     [SerializeField] private Transform leftWall;
     [SerializeField] private Transform rightWall;
 
+    [SerializeField] private InteractionObject[] interactionObjects;
+
     public Vector2Int gridSize { get; private set; }
     private Vector2Int initialTilePos;
 
@@ -23,6 +25,7 @@ public class MapController : MonoBehaviour
         instance = this;
 
         CalculateGridSize();
+        InitializeInteractions();
     }
 
     private void CalculateGridSize() 
@@ -32,6 +35,14 @@ public class MapController : MonoBehaviour
 
         gridSize = new Vector2Int(xCount, yCount);
         initialTilePos = new Vector2Int((int)leftWall.position.x, (int)bottomWall.position.y);
+    }
+
+    private void InitializeInteractions() 
+    {
+        foreach (InteractionObject interaction in interactionObjects) 
+        {
+            interaction.Initialize();
+        }
     }
 
     public Vector2Int GetRandomTile()
@@ -63,7 +74,7 @@ public class MapController : MonoBehaviour
         return tilePos;
     }
 
-    public Vector2Int PosToTile(Vector2 position)
+    public Vector2Int RoundVector(Vector2 position)
     {
         Vector2Int tilePos = Vector2Int.zero;
 
@@ -72,4 +83,21 @@ public class MapController : MonoBehaviour
 
         return tilePos;
     }
+
+    public Vector2Int PosToTile(Vector2 position)
+    {
+        Vector2Int tilePos = Vector2Int.zero;
+
+        tilePos.x = Mathf.RoundToInt(position.x);
+        tilePos.y = Mathf.RoundToInt(position.y);
+
+        tilePos -= initialTilePos;
+
+        return tilePos;
+    }
+
+    public InteractionObject[] GetInteractionObjects() 
+    {
+        return interactionObjects;
+    } 
 }

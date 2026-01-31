@@ -19,7 +19,7 @@ public class GuestMovement : MonoBehaviour
     private Vector2Int tileDestinationPos = Vector2Int.zero;
     private Vector2Int tileDestinationVector = Vector2Int.zero;
 
-    private Vector2Int currentTilePos;
+    private Vector2Int currentRoundedPos;
 
     private bool xStrideBigger;
 
@@ -40,7 +40,7 @@ public class GuestMovement : MonoBehaviour
     {
         finalDestinationPos = MapController.instance.GetTilePos(tile.x, tile.y);
 
-        Vector2Int moveDestinationVector = finalDestinationPos - currentTilePos;
+        Vector2Int moveDestinationVector = finalDestinationPos - currentRoundedPos;
         xStrideBigger = Mathf.Abs(moveDestinationVector.x) >= Mathf.Abs(moveDestinationVector.y);
 
         gc.ChangeCurrentState(GuestActions.Moving);
@@ -51,7 +51,7 @@ public class GuestMovement : MonoBehaviour
     private void SetTileDestination()
     {
         tileDestinationVector = CalculateTileDestination();
-        tileDestinationPos = MapController.instance.PosToTile(transform.position) + tileDestinationVector;
+        tileDestinationPos = MapController.instance.RoundVector(transform.position) + tileDestinationVector;
 
         if (tileDestinationVector == Vector2Int.zero)
         {
@@ -63,8 +63,8 @@ public class GuestMovement : MonoBehaviour
     {
         Vector2Int tileDestinationVector = Vector2Int.zero;
 
-        currentTilePos = MapController.instance.PosToTile(transform.position);
-        Vector2Int moveDestinationVector = finalDestinationPos - currentTilePos;
+        currentRoundedPos = MapController.instance.RoundVector(transform.position);
+        Vector2Int moveDestinationVector = finalDestinationPos - currentRoundedPos;
 
         if (xStrideBigger)
         {
@@ -116,20 +116,20 @@ public class GuestMovement : MonoBehaviour
 
         transform.position += positionDiff;
 
-        Vector2Int newTilePos = MapController.instance.PosToTile(transform.position);
+        Vector2Int newRoundedPos = MapController.instance.RoundVector(transform.position);
 
         if (Vector2.Distance(transform.position, tileDestinationPos) < tileProximityNeeded)
         {
-            if (newTilePos.x != currentTilePos.x)
+            if (newRoundedPos.x != currentRoundedPos.x)
             {
-                if (newTilePos.x == finalDestinationPos.x)
+                if (newRoundedPos.x == finalDestinationPos.x)
                 {
                     transform.position = new Vector3(finalDestinationPos.x, transform.position.y, 0);
                 }
             }
-            else if (newTilePos.y != currentTilePos.y)
+            else if (newRoundedPos.y != currentRoundedPos.y)
             {
-                if (newTilePos.y == finalDestinationPos.y)
+                if (newRoundedPos.y == finalDestinationPos.y)
                 {
                     transform.position = new Vector3(transform.position.x, finalDestinationPos.y, 0);
                 }
