@@ -47,6 +47,7 @@ public class GuestMovement : MonoBehaviour
     private void SetTileDestination()
     {
         tileDestinationVector = CalculateTileDestination();
+        gc.SetFacingDir(tileDestinationVector);
         tileDestinationPos = MapController.instance.RoundVector(transform.position) + tileDestinationVector;
 
         if (tileDestinationVector == Vector2Int.zero)

@@ -1867,6 +1867,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7283958366595247022, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4740,17 +4744,137 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1291471926300683229, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
-      propertyPath: m_SortingLayer
-      value: 2
+    - target: {fileID: 568731376135704882, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1357692839, guid: 482152ab46d49564bb2bd38b0170c670, type: 3}
+    - target: {fileID: 753182950333777185, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.069000095
       objectReference: {fileID: 0}
+    - target: {fileID: 1697354538892708423, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -154319428, guid: aa7473ffdc8d79e4d8afb6763192a823, type: 3}
+    - target: {fileID: 1960478211723262421, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 23372444, guid: c0a0d5726282e6c4eaef502003f135eb, type: 3}
+    - target: {fileID: 1963935505284534565, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 289018850, guid: 3bb91f50cd33f624583205c3908cf314, type: 3}
+    - target: {fileID: 2207434293081885330, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: guestName
+      value: Jester
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362615988746225756, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.031
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362615988746225756, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.192
+      objectReference: {fileID: 0}
+    - target: {fileID: 2432369684407637641, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Name
+      value: Guest Merry
+      objectReference: {fileID: 0}
+    - target: {fileID: 2786530334336018886, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.196
+      objectReference: {fileID: 0}
+    - target: {fileID: 2856284356414650131, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Name
+      value: Guest Serene
+      objectReference: {fileID: 0}
+    - target: {fileID: 3036034692855378103, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 22d501d906ef09b40bcbe87d8a422b82, type: 2}
     - target: {fileID: 3079498062036162584, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5
       objectReference: {fileID: 0}
+    - target: {fileID: 3105439763699139713, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Name
+      value: Guest Stern
+      objectReference: {fileID: 0}
+    - target: {fileID: 3129145664638970993, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Name
+      value: Guest Wrath
+      objectReference: {fileID: 0}
+    - target: {fileID: 3172443591464932158, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.079
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202763879194049486, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.107
+      objectReference: {fileID: 0}
+    - target: {fileID: 3504660743964873513, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 3929372756882960544, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 38722e3a56d482e4c9bd6188188df78e, type: 2}
+    - target: {fileID: 3959693009350580304, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 14033122334591343b236d1f6312adc2, type: 2}
+    - target: {fileID: 4019800924996332646, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Name
+      value: Guest Misery
+      objectReference: {fileID: 0}
+    - target: {fileID: 4199771227662904258, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 6778aafa51938ad4998deefe06d43cc6, type: 2}
+    - target: {fileID: 4812870745770442634, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -718154642, guid: 27132a0a30ba6244380887bb4e314edc, type: 3}
+    - target: {fileID: 4812870745770442634, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5127890600299750461, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: guestName
+      value: Wrath
+      objectReference: {fileID: 0}
+    - target: {fileID: 5142447979936156877, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: guestName
+      value: Stern
+      objectReference: {fileID: 0}
+    - target: {fileID: 5469225163234328415, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: guestName
+      value: Serene
+      objectReference: {fileID: 0}
     - target: {fileID: 5712034599559919188, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_Name
       value: Guests
+      objectReference: {fileID: 0}
+    - target: {fileID: 5718900527462525849, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020207819136615294, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.059
+      objectReference: {fileID: 0}
+    - target: {fileID: 6050686676102130574, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.039
+      objectReference: {fileID: 0}
+    - target: {fileID: 6437101035269394806, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.115
+      objectReference: {fileID: 0}
+    - target: {fileID: 6596695479996474410, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: guestName
+      value: Misery
       objectReference: {fileID: 0}
     - target: {fileID: 6721488977822712399, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4792,6 +4916,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6860989267994898668, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860989267994898668, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6860989267994898668, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.076
+      objectReference: {fileID: 0}
+    - target: {fileID: 8001879671612120591, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3046632c1c8b6574aaf8947634087be0, type: 2}
     - target: {fileID: 8039727386622654112, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3
@@ -4799,6 +4939,10 @@ PrefabInstance:
     - target: {fileID: 8039727386622654112, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_LocalPosition.y
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8279720552084882142, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_Name
+      value: Guest Jester
       objectReference: {fileID: 0}
     - target: {fileID: 8302139303281850039, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4811,6 +4955,10 @@ PrefabInstance:
     - target: {fileID: 8305578695142612551, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8470501503457328529, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.121
       objectReference: {fileID: 0}
     - target: {fileID: 8762432048060550223, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4897,6 +5045,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3464938474672918381, guid: 919f62f31cc4fd947bbf5e2cc509de59, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3575196675268082590, guid: 919f62f31cc4fd947bbf5e2cc509de59, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 5422581010150627315, guid: 919f62f31cc4fd947bbf5e2cc509de59, type: 3}
       propertyPath: availableTraits.Array.data[3].name
       value: 
@@ -4913,6 +5069,10 @@ PrefabInstance:
       propertyPath: availableTraits.Array.data[3].impossibleInteractions.Array.data[0]
       value: 
       objectReference: {fileID: 806114088}
+    - target: {fileID: 8295205945008154528, guid: 919f62f31cc4fd947bbf5e2cc509de59, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 8754060331406184936, guid: 919f62f31cc4fd947bbf5e2cc509de59, type: 3}
       propertyPath: m_Name
       value: Map

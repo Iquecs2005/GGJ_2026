@@ -13,12 +13,14 @@ public class GuestController : MonoBehaviour
     [Header("General Variables")]
     public GuestActions currentAction = GuestActions.Ready;
     [SerializeField] private string guestName;
+    [SerializeField] private Vector2Int facingDir;    
 
     [Header("Events")]
     public UnityEvent onActivityEnd;
     public UnityEvent onMovementEnd;
     public UnityEvent onNearMovementEnd;
     public UnityEvent onTraitsModification;
+    public UnityEvent<Vector2Int> onFacingDirChange;
 
     public void ChangeCurrentState(GuestActions newAction) 
     {
@@ -38,6 +40,12 @@ public class GuestController : MonoBehaviour
     public string GetName() 
     {
         return guestName;
+    }
+
+    public void SetFacingDir(Vector2Int newDir) 
+    {
+        facingDir = newDir;
+        onFacingDirChange.Invoke(facingDir);
     }
 }
 
