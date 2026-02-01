@@ -188,6 +188,33 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.076
       objectReference: {fileID: 0}
+    - target: {fileID: 7901643433774227842, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: uniqueDialogues.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901643433774227842, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: uniqueDialogues.Array.data[0]
+      value: "Oh, such a wonderful evening, isn\u2019t it? I\u2019m having a marvelous
+        time already, and we\u2019ve only just met. "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901643433774227842, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: uniqueDialogues.Array.data[1]
+      value: 'Good evening! What a pleasure it is to exist in this time and place. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901643433774227842, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: uniqueDialogues.Array.data[2]
+      value: "I\u2019m in excellent spirits. Aren\u2019t we incredibly fortunate
+        to be here today?"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901643433774227842, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: uniqueDialogues.Array.data[3]
+      value: 'Wonderful evening! Please enjoy your stay, many good things are about
+        to unfold. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7901643433774227842, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      propertyPath: uniqueDialogues.Array.data[4]
+      value: Oh, my! You look radiant today, I hope this feeling stays with you forever!
+      objectReference: {fileID: 0}
     - target: {fileID: 8001879671612120591, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       propertyPath: m_Controller
       value: 
@@ -232,21 +259,39 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2432369684407637641, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 9146282737805156965}
     - targetCorrespondingSourceObject: {fileID: 8279720552084882142, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2103898306451673389}
+    - targetCorrespondingSourceObject: {fileID: 8279720552084882142, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3967287083391969296}
     - targetCorrespondingSourceObject: {fileID: 3105439763699139713, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7647212544664211710}
+    - targetCorrespondingSourceObject: {fileID: 3105439763699139713, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6704694274466243308}
     - targetCorrespondingSourceObject: {fileID: 2856284356414650131, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3728339317425623134}
+    - targetCorrespondingSourceObject: {fileID: 2856284356414650131, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1463372341533509262}
     - targetCorrespondingSourceObject: {fileID: 3129145664638970993, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 6566108931811710504}
+    - targetCorrespondingSourceObject: {fileID: 3129145664638970993, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7560713382710497743}
     - targetCorrespondingSourceObject: {fileID: 4019800924996332646, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 7693033998486986800}
+    - targetCorrespondingSourceObject: {fileID: 4019800924996332646, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587053636654201986}
   m_SourcePrefab: {fileID: 100100000, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
 --- !u!1 &296329023150229928 stripped
 GameObject:
@@ -265,10 +310,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad03bf4c9d265c4eba2c278e74ad863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueDialogues: []
+  uniqueDialogues:
+  - "Just get this over it and tell me what you want. I didn\u2019t come here to
+    linger."
+  - "I\u2019m in a mood. Decide quickly whether you\u2019re the cause of it. "
+  - "Feels like poverty has a posture\u2026 You better correct yours. What do you
+    want?"
+  - "Who let you in this event? Maybe your clothes would look better if they weren\u2019t
+    made of plastic\u2026 Please stop wasting my time.  "
   chosenDialogues:
   - {fileID: 11400000, guid: 722bc9b4f400986489def7215a32c540, type: 2}
   - {fileID: 11400000, guid: 0578863ff5d60374696f7885b57b4248, type: 2}
+--- !u!114 &7560713382710497743
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 296329023150229928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintChosen: 
 --- !u!1 &317659668634231128 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3105439763699139713, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
@@ -286,10 +351,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad03bf4c9d265c4eba2c278e74ad863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueDialogues: []
+  uniqueDialogues:
+  - "Hello. Go on, I\u2019m all ears."
+  - Good evening. Proceed.
+  - "There\u2019s no need for banter. This will be brief."
+  - "Hi. Let\u2019s be direct."
+  - "Evening. I don\u2019t like speculation, I value efficiency. Be quick. "
   chosenDialogues:
   - {fileID: 11400000, guid: bc00de0433d4b51409efe2aeaa83af56, type: 2}
   - {fileID: 11400000, guid: 6d874a1a8b74aeb48b79811c36461d3b, type: 2}
+--- !u!114 &6704694274466243308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317659668634231128}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintChosen: 
 --- !u!1 &636062766017925834 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2856284356414650131, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
@@ -307,10 +390,46 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad03bf4c9d265c4eba2c278e74ad863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueDialogues: []
+  uniqueDialogues:
+  - "Good evening. There\u2019s no need to rush, nothing here requires quickness\u2026
+    We have all the time in the world."
+  - "Hello. You may stand here with me, if you\u2019d like."
+  - "Good night. Take your time, I\u2019m not going anywhere."
+  - "Good evening. I\u2019m enjoying my time just standing here for a while. "
   chosenDialogues:
   - {fileID: 11400000, guid: 29e73d09e9e2d9a47b7aa2369cb8bf44, type: 2}
   - {fileID: 11400000, guid: 4320935b127be6b4191de0c6c33b0fb5, type: 2}
+--- !u!114 &1463372341533509262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636062766017925834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintChosen: 
+--- !u!1 &1058824874959287120 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2432369684407637641, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+  m_PrefabInstance: {fileID: 3418285761831658969}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &9146282737805156965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058824874959287120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintChosen: 
 --- !u!1 &1781458901350287807 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4019800924996332646, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
@@ -328,10 +447,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad03bf4c9d265c4eba2c278e74ad863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueDialogues: []
+  uniqueDialogues:
+  - "\u2026This mask isn\u2019t meant to hide my pain\u2026 It contains all of it."
+  - "Evening\u2026 just evening. All the good is already gone. "
+  - "Evening. If I seem quiet, it\u2019s solely because there\u2019s nothing worth
+    talking about. "
+  - "Evening. It seems like I bring a rainy cloud with my presence\u2026 I\u2019m
+    so sorry for that."
+  - "Hello. I\u2019m in no need of comfort, I\u2019ve already made peace with my
+    aching\u2026"
   chosenDialogues:
   - {fileID: 11400000, guid: 727b1179666d04445bf787f7541d4da9, type: 2}
   - {fileID: 11400000, guid: a11e472812ad20745b8acc0b1d8058a3, type: 2}
+--- !u!114 &1587053636654201986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1781458901350287807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintChosen: 
 --- !u!1 &6743939452353455879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8279720552084882142, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
@@ -349,7 +489,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ad03bf4c9d265c4eba2c278e74ad863, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  uniqueDialogues: []
+  uniqueDialogues:
+  - Hello- Oh no. No handshaking. My hand wanders off when it gets nervous.
+  - "Ah! You can see me\u2026 that means I\u2019m real again. Bummer."
+  - Hi, hello. Wait- Did you hear that? No, great. Neither did I!
   chosenDialogues:
   - {fileID: 11400000, guid: a850730ebd9267044ad1c995dc3a770e, type: 2}
   - {fileID: 11400000, guid: f2a9f3c80d0488643a088f23c7df6f24, type: 2}
+--- !u!114 &3967287083391969296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6743939452353455879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hintChosen: 

@@ -10,7 +10,8 @@ public class GuestDialogues : MonoBehaviour
 
     void Start()
     {
+        GuestHints guestHints = gameObject.GetComponent<GuestHints>();
         chosenDialogues[0].text = uniqueDialogues[Random.Range(0, uniqueDialogues.Length)];
-        chosenDialogues[1].text = "teste"; //sortear depois texto da fala da dica
+        chosenDialogues[1].text = guestHints.hintChosen; //sortear depois texto da fala da dica
     }
 }

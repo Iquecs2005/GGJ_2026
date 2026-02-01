@@ -1711,6 +1711,66 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &577408029
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 577408031}
+  - component: {fileID: 577408030}
+  m_Layer: 0
+  m_Name: HintManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &577408030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577408029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c94fc0ad19f86164ea9d48ac39c981f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  introvertHints:
+  - Apparently, Mr Mask never speaks without a good reason to do so.
+  - "I hear our fellow guest isn\u2019t much of a talker."
+  extrovertHints:
+  - Did you know? Mr Mask is said to wake up whatever room they enter.
+  meatHints:
+  - "By the way, everyone knows Mr Mask is a meat-lover. What, you didn\u2019t know?"
+  veggieHints:
+  - "You\u2019d never see Mr Mask and a plate of meat together, they\u2019re plant-based."
+  - "I think you should know Mr Mask likes green food over anything that was once
+    alive\u2026"
+  drinkHints:
+  - 'Rumor has it that Mr Mask is a really good drinker. '
+  - I believe Mr Mask is a cocktail enthusiast!
+  noDrinkHints:
+  - I think Mr Mask hates alcohol and that even the smell of it makes them sick!
+--- !u!4 &577408031
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 577408029}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &602601391
 GameObject:
   m_ObjectHideFlags: 0
@@ -5083,3 +5143,4 @@ SceneRoots:
   - {fileID: 110172140}
   - {fileID: 2143696895}
   - {fileID: 197348562}
+  - {fileID: 577408031}

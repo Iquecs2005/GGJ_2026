@@ -32,9 +32,13 @@ public class GuestController : MonoBehaviour
         onActivityEnd.Invoke();
     }
 
-    public void SetTraits(List<PersonalityTrait> newTraits) 
+    public void SetTraits(List<PersonalityTrait> newTraits)
     {
         gtm.SetTraits(newTraits);
+    }
+    public List<PersonalityTrait> GetTraits()
+    {
+        return gtm.GetTraits();
     }
 
     public string GetName() 
