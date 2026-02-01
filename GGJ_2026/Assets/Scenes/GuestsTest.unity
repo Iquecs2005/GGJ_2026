@@ -4847,18 +4847,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1503977621965333814, guid: b716daf1000ad274981536731ce2b753, type: 3}
-      propertyPath: dialogues.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1503977621965333814, guid: b716daf1000ad274981536731ce2b753, type: 3}
-      propertyPath: dialogues.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 7eaa111feb99b7b45a5fcd3607a94b91, type: 2}
-    - target: {fileID: 1503977621965333814, guid: b716daf1000ad274981536731ce2b753, type: 3}
-      propertyPath: dialogues.Array.data[1]
-      value: 
-      objectReference: {fileID: 11400000, guid: 2f0836a643c46e94da361005d51b8eb9, type: 2}
     - target: {fileID: 7684554899501401517, guid: b716daf1000ad274981536731ce2b753, type: 3}
       propertyPath: m_Name
       value: DialogueHandler

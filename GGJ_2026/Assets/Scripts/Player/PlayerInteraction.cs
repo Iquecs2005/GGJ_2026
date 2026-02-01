@@ -53,6 +53,8 @@ public class PlayerInteraction : MonoBehaviour
 
     public void Notebook()
     {
+        return;
+
         if (pc.playerState == PlayerState.Blocked)
         {
             return;
