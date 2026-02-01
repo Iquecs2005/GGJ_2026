@@ -6,16 +6,12 @@ using UnityEngine.UI;
 
 public class DialogueHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject canvas;
     [SerializeField] private GameObject sprite;
     [SerializeField] private TextMeshProUGUI dialogue;
     [SerializeField] private TextMeshProUGUI charName;
-    [SerializeField] private TextMeshProUGUI[] nameLog;
-    [SerializeField] private GameObject dialogueBox;
 
 
     [SerializeField] private DialogueBox[] dialogues;
-    private List<DialogueBox> dialoguesLog = new List<DialogueBox>();
     private int index = 0;
 
 
