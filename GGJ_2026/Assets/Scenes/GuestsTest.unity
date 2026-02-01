@@ -5036,6 +5036,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1397973676944148122, guid: 919f62f31cc4fd947bbf5e2cc509de59, type: 3}
+      propertyPath: m_Offset.x
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 2203704593730433293, guid: 919f62f31cc4fd947bbf5e2cc509de59, type: 3}
       propertyPath: guests.Array.data[0]
       value: 
