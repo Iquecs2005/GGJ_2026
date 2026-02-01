@@ -22,6 +22,11 @@ public class PlayerInteraction : MonoBehaviour
 
     public void Interact() 
     {
+        if (pc.playerState == PlayerState.Blocked)
+        {
+            return;
+        }
+
         GameObject interactableObject = GetClosestObject(interactMask);
         if (interactableObject != null)
         {
@@ -32,16 +37,27 @@ public class PlayerInteraction : MonoBehaviour
 
     public void Blame() 
     {
+        if (pc.playerState == PlayerState.Blocked)
+        {
+            return;
+        }
+
         GameObject guestObject = GetClosestObject(blameMask);
         if (guestObject != null)
         {
             GuestController guestController = guestObject.GetComponent<GuestController>();
             BlameManager.instance.ActivateBlameConfirm(guestController);
+            pc.SetPlayerState(PlayerState.Blocked);
         }
     }
 
     public void Notebook()
     {
+        if (pc.playerState == PlayerState.Blocked)
+        {
+            return;
+        }
+
         if (!notebookOpen)
         {
             NotebookManager.Instance.OpenNotebook();

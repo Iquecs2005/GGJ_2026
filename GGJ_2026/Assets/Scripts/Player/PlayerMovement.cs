@@ -73,7 +73,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void ApplyMovement()
     {
-        Vector2 targetSpeed = moveInput * maxMoveSpeed;
+        Vector2 currentMoveInput = moveInput;
+
+        if (pc.playerState == PlayerState.Blocked)
+        {
+            currentMoveInput = Vector2.zero;
+        }
+
+        Vector2 targetSpeed = currentMoveInput * maxMoveSpeed;
 
         Vector2 speedDif = targetSpeed - pc.rb.velocity;
 

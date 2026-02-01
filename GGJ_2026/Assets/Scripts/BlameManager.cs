@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class BlameManager : MonoBehaviour
@@ -29,6 +30,8 @@ public class BlameManager : MonoBehaviour
         blamedGuest = guest;
         accusedText.text = blamedGuest.GetName();
         UIHolder.SetActive(true);
+
+        GameManager.Instance.GetPlayerController().SetPlayerState(PlayerState.Blocked);
     }
 
     public void ConfirmBlame() 
@@ -48,5 +51,6 @@ public class BlameManager : MonoBehaviour
         Time.timeScale = 1;
 
         UIHolder.SetActive(false);
+        GameManager.Instance.GetPlayerController().SetPlayerState(PlayerState.Idle);
     }
 }

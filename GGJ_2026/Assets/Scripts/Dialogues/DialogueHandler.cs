@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DialogueHandler : MonoBehaviour
@@ -17,6 +18,8 @@ public class DialogueHandler : MonoBehaviour
 
     [SerializeField] private DialogueBox[] dialogues;
     private int index = 0;
+
+    public UnityEvent onDialogueEnd;
 
     private void Awake()
     {
@@ -56,6 +59,7 @@ public class DialogueHandler : MonoBehaviour
         dialogue.text = dialogues[index].text;
         charName.text = dialogues[index].char_name;
         canvas.SetActive(true);
+        GameManager.Instance.GetPlayerController().SetPlayerState(PlayerState.Blocked);
     }
 
     public void NextDialogue()
@@ -76,6 +80,7 @@ public class DialogueHandler : MonoBehaviour
     private void DialogueEnd()
     {
         canvas.SetActive(false);
+        GameManager.Instance.GetPlayerController().SetPlayerState(PlayerState.Idle);
     }
 }
 
