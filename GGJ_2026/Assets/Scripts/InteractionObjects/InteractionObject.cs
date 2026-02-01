@@ -16,6 +16,7 @@ public class InteractionObject : MonoBehaviour
     public void Initialize() 
     {
         interactionTile = MapController.instance.PosToTile(interactionTransform.position);
+        MapController.instance.AddUnwalkableSpot(interactionTile);
     } 
 
     public string GetName() 

@@ -56,6 +56,11 @@ public class MapController : MonoBehaviour
         return mg.PosToTile(position);
     }
 
+    public void AddUnwalkableSpot(Vector2Int unwalkableSpot) 
+    {
+        mg.AddUnwalkableSpot(unwalkableSpot);
+    }
+
     public List<InteractionObject> GetInteractionObjects()
     {
         return mi.GetInteractionObjects();

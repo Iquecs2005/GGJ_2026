@@ -15,6 +15,7 @@ public class MapGrid : MonoBehaviour
 
     public Vector2Int gridSize { get; private set; }
     private Vector2Int initialTilePos;
+    private List<Vector2Int> unwalkableSpots = new List<Vector2Int>();
 
     public void CalculateGridSize()
     {
@@ -27,12 +28,16 @@ public class MapGrid : MonoBehaviour
 
     public Vector2Int GetRandomTile()
     {
-        Vector2Int randomTile = Vector2Int.zero;
+        while (true)
+        {
+            Vector2Int randomTile = Vector2Int.zero;
 
-        randomTile.x = Random.Range(0, gridSize.x);
-        randomTile.y = Random.Range(0, gridSize.y);
+            randomTile.x = Random.Range(0, gridSize.x);
+            randomTile.y = Random.Range(0, gridSize.y);
 
-        return randomTile;
+            if (!unwalkableSpots.Contains(randomTile))
+                return randomTile;
+        }
     }
 
     public Vector2Int GetRandomTilePos()
@@ -74,5 +79,10 @@ public class MapGrid : MonoBehaviour
         tilePos -= initialTilePos;
 
         return tilePos;
+    }
+
+    public void AddUnwalkableSpot(Vector2Int unwalkableSpot) 
+    {
+        unwalkableSpots.Add(unwalkableSpot);
     }
 }
