@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BlameManager : MonoBehaviour
 {
@@ -35,9 +36,9 @@ public class BlameManager : MonoBehaviour
         Time.timeScale = 1;
 
         if (MapController.instance.mrMascara == blamedGuest)
-            print("Acertou!");
+            SceneManager.LoadScene("WinScreen");
         else
-            print("Errou!");
+            SceneManager.LoadScene("LoseScreen");
 
         UIHolder.SetActive(false);
     }
