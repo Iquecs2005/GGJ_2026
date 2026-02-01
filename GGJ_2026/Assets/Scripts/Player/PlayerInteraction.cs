@@ -13,6 +13,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private LayerMask interactMask;
     [SerializeField] private LayerMask blameMask;
 
+    private bool notebookOpen = false;
+
     public void MoveInteractionBubble() 
     {
         interactionCenter.localPosition = pc.facingDirection;
@@ -36,6 +38,19 @@ public class PlayerInteraction : MonoBehaviour
             GuestController guestController = guestObject.GetComponent<GuestController>();
             BlameManager.instance.ActivateBlameConfirm(guestController);
         }
+    }
+
+    public void Notebook()
+    {
+        if (!notebookOpen)
+        {
+            NotebookManager.Instance.OpenNotebook();
+        }
+        else
+        {
+            NotebookManager.Instance.CloseNotebook();
+        }
+        notebookOpen = !notebookOpen;
     }
 
     private GameObject GetClosestObject(LayerMask layerMask) 
