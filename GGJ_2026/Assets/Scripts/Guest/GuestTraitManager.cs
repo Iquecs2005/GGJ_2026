@@ -15,6 +15,13 @@ public class GuestTraitManager : MonoBehaviour
         gc.onTraitsModification.Invoke();
     }
 
+    public List<PersonalityTrait> GetTraits() 
+    {
+        List<PersonalityTrait> traitListCopy = new List<PersonalityTrait>(personalityTraits);
+
+        return traitListCopy;
+    }
+
     public void RemoveConflictingInteractions(ref List<InteractionObject> interactionObjects) 
     {
         foreach (PersonalityTrait trait in personalityTraits)
