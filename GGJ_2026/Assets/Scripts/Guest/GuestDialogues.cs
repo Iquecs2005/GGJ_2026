@@ -8,7 +8,7 @@ public class GuestDialogues : MonoBehaviour
 
     public DialogueBox[] chosenDialogues;
 
-    void Start()
+    public void ChooseDialog()
     {
         GuestHints guestHints = gameObject.GetComponent<GuestHints>();
         chosenDialogues[0].text = uniqueDialogues[Random.Range(0, uniqueDialogues.Length)];

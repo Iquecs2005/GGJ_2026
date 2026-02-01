@@ -333,6 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guestDialogues: {fileID: 6566108931811710504}
   hintChosen: 
 --- !u!1 &317659668634231128 stripped
 GameObject:
@@ -372,6 +373,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guestDialogues: {fileID: 7647212544664211710}
   hintChosen: 
 --- !u!1 &636062766017925834 stripped
 GameObject:
@@ -411,6 +413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guestDialogues: {fileID: 3728339317425623134}
   hintChosen: 
 --- !u!1 &1058824874959287120 stripped
 GameObject:
@@ -429,6 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guestDialogues: {fileID: 4816729666337981531}
   hintChosen: 
 --- !u!1 &1781458901350287807 stripped
 GameObject:
@@ -471,7 +475,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guestDialogues: {fileID: 7693033998486986800}
   hintChosen: 
+--- !u!114 &4816729666337981531 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7901643433774227842, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
+  m_PrefabInstance: {fileID: 3418285761831658969}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058824874959287120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ad03bf4c9d265c4eba2c278e74ad863, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6743939452353455879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8279720552084882142, guid: 71cf54ec3743a8b429194bf6d2c7fd0a, type: 3}
@@ -508,4 +524,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d88b0f128910c7b439675f1e1ed15df7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  guestDialogues: {fileID: 2103898306451673389}
   hintChosen: 

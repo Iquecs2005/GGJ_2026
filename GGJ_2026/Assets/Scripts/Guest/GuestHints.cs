@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GuestHints : MonoBehaviour
 {
+    [SerializeField] private GuestDialogues guestDialogues;
+
     public string hintChosen;
 
     private void Start()
@@ -50,5 +52,6 @@ public class GuestHints : MonoBehaviour
             }
         }
 
+        guestDialogues.ChooseDialog();
     }
 }
