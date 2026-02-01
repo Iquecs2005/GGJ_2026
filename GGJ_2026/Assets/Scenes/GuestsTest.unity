@@ -1854,6 +1854,17 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!114 &642183768 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1503977621965333814, guid: b716daf1000ad274981536731ce2b753, type: 3}
+  m_PrefabInstance: {fileID: 2143696895}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb275403ae7c33948a470df322591e0b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &665903057
 GameObject:
   m_ObjectHideFlags: 0
@@ -1944,6 +1955,30 @@ PrefabInstance:
     - target: {fileID: 1971507062817602851, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
+      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
+      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1295085285}
+    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
+      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
+      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnPlayerStateChange
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
+      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: PlayerInputController, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
+      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5810256854045619382, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2484,6 +2519,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254670059}
   m_CullTransparentMesh: 1
+--- !u!114 &1295085285 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3029537380719248402, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
+  m_PrefabInstance: {fileID: 688659460}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 613b56ab728a546428be3f2a14579747, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1340465532
 GameObject:
   m_ObjectHideFlags: 0
@@ -2586,6 +2632,57 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!1 &1353598185 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2230323606858756301, guid: b716daf1000ad274981536731ce2b753, type: 3}
+  m_PrefabInstance: {fileID: 2143696895}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1353598191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1353598185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Actions: {fileID: -944628639613478452, guid: ec7a2b68be2b05e45a2645d2bbaf59b1, type: 3}
+  m_NotificationBehavior: 2
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 642183768}
+        m_TargetAssemblyTypeName: DialogueHandler, Assembly-CSharp
+        m_MethodName: NextDialogueInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 31e2ab00-5864-4a20-a882-ef8026343917
+    m_ActionName: Normal/PassDialogue[/XInputControllerWindows/buttonSouth,/Mouse/leftButton,/Keyboard/z]
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Normal
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
 --- !u!1 &1353837218
 GameObject:
   m_ObjectHideFlags: 0
@@ -4891,10 +4988,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2449417792485701366, guid: b716daf1000ad274981536731ce2b753, type: 3}
+    - {fileID: 463628226037381390, guid: b716daf1000ad274981536731ce2b753, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 2230323606858756301, guid: b716daf1000ad274981536731ce2b753, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1353598191}
   m_SourcePrefab: {fileID: 100100000, guid: b716daf1000ad274981536731ce2b753, type: 3}
 --- !u!1001 &3062035340013583079
 PrefabInstance:

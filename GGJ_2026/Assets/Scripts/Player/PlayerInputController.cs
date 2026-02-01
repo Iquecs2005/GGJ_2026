@@ -6,6 +6,8 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputController : MonoBehaviour
 {
+    [SerializeField] private PlayerInput playerInput;
+
     [SerializeField] private UnityEvent<Vector2> OnMoveEvent;
     [SerializeField] private UnityEvent OnInteractionEvent;
     [SerializeField] private UnityEvent OnBlameEvent;
@@ -34,5 +36,13 @@ public class PlayerInputController : MonoBehaviour
     {
         if (context.performed)
             OnNotebookEvent.Invoke();
+    }
+
+    public void OnPlayerStateChange(PlayerState playerState) 
+    {
+        if (playerState == PlayerState.Blocked)
+            playerInput.enabled = false;
+        else
+            playerInput.enabled = true;
     }
 }

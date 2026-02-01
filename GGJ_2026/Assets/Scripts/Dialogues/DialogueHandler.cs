@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class DialogueHandler : MonoBehaviour
 {
-
     public static DialogueHandler Instance { get; private set; }
 
     [SerializeField] private GameObject canvas;
@@ -38,12 +38,10 @@ public class DialogueHandler : MonoBehaviour
         charName.text = dialogues[index].char_name;
     }
 
-    void Update()
+    public void NextDialogueInput(InputAction.CallbackContext context) 
     {
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
+        if (context.performed)
             NextDialogue();
-        }
     }
 
     public void DialogueStart(string chosenName, Sprite chosenSprite, string[] chosenDialogues)
@@ -58,17 +56,18 @@ public class DialogueHandler : MonoBehaviour
         sprite.GetComponent<Image>().sprite = newSprite;
         dialogue.text = dialogues[index].text;
         charName.text = dialogues[index].char_name;
-        canvas.SetActive(true);
         GameManager.Instance.GetPlayerController().SetPlayerState(PlayerState.Blocked);
+        canvas.SetActive(true);
     }
 
     public void NextDialogue()
     {
+        print(dialogues);
+        index++;
         if (index < dialogues.Length)
         {
             dialogue.text = dialogues[index].text;
             charName.text = dialogues[index].char_name;
-            ++index;
         }
         else
         {

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
 
     [Header("Events")]
     [SerializeField] private UnityEvent onFacingDirectionChange;
+    [SerializeField] private UnityEvent<PlayerState> onPlayerStateChange;
 
     public void SetFacingDirection(Vector2 newDirection) 
     {
@@ -26,7 +27,11 @@ public class PlayerController : MonoBehaviour
 
     public void SetPlayerState(PlayerState playerState)
     {
+        if (this.playerState == playerState)
+            return;
+
         this.playerState = playerState;
+        onPlayerStateChange.Invoke(this.playerState);
     }
 }
 
