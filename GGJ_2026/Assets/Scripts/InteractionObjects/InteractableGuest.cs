@@ -6,6 +6,6 @@ public class InteractableGuest : MonoBehaviour, IPlayerInteractable
 {
     public void Interact() 
     {
-        print("Começou dialogo com " + gameObject.name);
+        //print("Começou dialogo com " + gameObject.name);
     }
 }

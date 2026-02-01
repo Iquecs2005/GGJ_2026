@@ -12,6 +12,7 @@ public class GuestController : MonoBehaviour
 
     [Header("General Variables")]
     public GuestActions currentAction = GuestActions.Ready;
+    [SerializeField] private string guestName;
 
     [Header("Events")]
     public UnityEvent onActivityEnd;
@@ -32,6 +33,11 @@ public class GuestController : MonoBehaviour
     public void SetTraits(List<PersonalityTrait> newTraits) 
     {
         gtm.SetTraits(newTraits);
+    }
+
+    public string GetName() 
+    {
+        return guestName;
     }
 }
 

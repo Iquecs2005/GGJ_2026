@@ -10,7 +10,8 @@ public class PlayerInteraction : MonoBehaviour
     [Header("Interaction Variables")]
     [SerializeField] private Transform interactionCenter;
     [SerializeField] private float interactionRadius;
-    [SerializeField] private LayerMask hitMask;
+    [SerializeField] private LayerMask interactMask;
+    [SerializeField] private LayerMask blameMask;
 
     public void MoveInteractionBubble() 
     {
@@ -19,7 +20,7 @@ public class PlayerInteraction : MonoBehaviour
 
     public void Interact() 
     {
-        GameObject interactableObject = GetInteractableObject();
+        GameObject interactableObject = GetClosestObject(interactMask);
         if (interactableObject != null)
         {
             IPlayerInteractable interactionScript = interactableObject.GetComponent<IPlayerInteractable>();    
@@ -27,9 +28,19 @@ public class PlayerInteraction : MonoBehaviour
         }
     }
 
-    private GameObject GetInteractableObject() 
+    public void Blame() 
     {
-        RaycastHit2D[] hitResults = Physics2D.CircleCastAll(interactionCenter.position, interactionRadius, Vector2.zero, 0, hitMask);
+        GameObject guestObject = GetClosestObject(blameMask);
+        if (guestObject != null)
+        {
+            GuestController guestController = guestObject.GetComponent<GuestController>();
+            BlameManager.instance.ActivateBlameConfirm(guestController);
+        }
+    }
+
+    private GameObject GetClosestObject(LayerMask layerMask) 
+    {
+        RaycastHit2D[] hitResults = Physics2D.CircleCastAll(interactionCenter.position, interactionRadius, Vector2.zero, 0, layerMask);
 
         if (hitResults.Length == 0)
             return null;

@@ -8,6 +8,7 @@ public class PlayerInputController : MonoBehaviour
 {
     [SerializeField] private UnityEvent<Vector2> OnMoveEvent;
     [SerializeField] private UnityEvent OnInteractionEvent;
+    [SerializeField] private UnityEvent OnBlameEvent;
 
     public void OnMove(InputAction.CallbackContext context) 
     {
@@ -25,7 +26,7 @@ public class PlayerInputController : MonoBehaviour
     public void OnBlame(InputAction.CallbackContext context)
     {
         if (context.performed)
-            print("Blame");
+            OnBlameEvent.Invoke();
     }
 
     public void OnNotebook(InputAction.CallbackContext context)

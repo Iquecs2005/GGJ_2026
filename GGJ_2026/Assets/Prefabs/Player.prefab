@@ -224,7 +224,10 @@ MonoBehaviour:
   pc: {fileID: 4541790878469801695}
   interactionCenter: {fileID: 4871251257351560882}
   interactionRadius: 0.5
-  hitMask:
+  interactMask:
+    serializedVersion: 2
+    m_Bits: 128
+  blameMask:
     serializedVersion: 2
     m_Bits: 128
 --- !u!114 &3029537380719248402
@@ -260,6 +263,21 @@ MonoBehaviour:
       - m_Target: {fileID: 9128721130647963864}
         m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
         m_MethodName: Interact
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  OnBlameEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9128721130647963864}
+        m_TargetAssemblyTypeName: PlayerInteraction, Assembly-CSharp
+        m_MethodName: Blame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
