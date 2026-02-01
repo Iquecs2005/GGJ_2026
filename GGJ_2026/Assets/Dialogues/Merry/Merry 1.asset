@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Merry 1
   m_EditorClassIdentifier: 
   text: oi eu sou merry
-  char_sprite: {fileID: -1340211906, guid: eba28338d4de1794b93902bfdff7087b, type: 3}
+  char_sprite: {fileID: 21300000, guid: 561d0b6e69a2fb1438a36910059f8173, type: 3}
   char_name: Merry

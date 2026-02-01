@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7afa4024fa710ad47b3c148b0b28dacf, type: 3}
-  m_Name: Merry 2
+  m_Name: Serene 2
   m_EditorClassIdentifier: 
-  text: teste
-  char_sprite: {fileID: 21300000, guid: 561d0b6e69a2fb1438a36910059f8173, type: 3}
-  char_name: Merry
+  text: 
+  char_sprite: {fileID: 21300000, guid: 13818893038b6404e8837eca6a31a25b, type: 3}
+  char_name: Serene
