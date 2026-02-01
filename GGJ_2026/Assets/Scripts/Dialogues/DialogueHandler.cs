@@ -62,7 +62,6 @@ public class DialogueHandler : MonoBehaviour
 
     public void NextDialogue()
     {
-        print(dialogues);
         index++;
         if (index < dialogues.Length)
         {

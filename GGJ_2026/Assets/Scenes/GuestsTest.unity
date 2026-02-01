@@ -1956,30 +1956,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
-      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
-      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1295085285}
-    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
-      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
-      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OnPlayerStateChange
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
-      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PlayerInputController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 4541790878469801695, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
-      propertyPath: onPlayerStateChange.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
     - target: {fileID: 5810256854045619382, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -2519,17 +2495,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1254670059}
   m_CullTransparentMesh: 1
---- !u!114 &1295085285 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3029537380719248402, guid: b8772af6a2643ad4f827cdbcf97feb56, type: 3}
-  m_PrefabInstance: {fileID: 688659460}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 613b56ab728a546428be3f2a14579747, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1340465532
 GameObject:
   m_ObjectHideFlags: 0
